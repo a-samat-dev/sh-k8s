@@ -26,8 +26,6 @@ spec:
             - secretRef:
                 name: sh-secrets
           resources:
-            requests:
-              memory: "256M"
             limits:
               memory: "256M"
 ---

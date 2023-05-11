@@ -25,11 +25,9 @@ spec:
                 name: sh-secrets
             - configMapRef:
                 name: sh-config-maps
-#          resources:
-#            requests:
-#              memory: "256M"
-#            limits:
-#              memory: "256M"
+          resources:
+            limits:
+              memory: "256M"
 ---
 apiVersion: v1
 kind: Service
