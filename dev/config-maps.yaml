@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sh-config-maps
+data:
+  SPRING_PROFILES_ACTIVE: dev
+  POSTGRES_URL: jdbc:postgresql://smart-health-do-user-13303397-0.b.db.ondigitalocean.com:25060
+  JWT_EXPIRATION_TIME: "86400000"
+  USER_SERVICE: http://user-service:8080
