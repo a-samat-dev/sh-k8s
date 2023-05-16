@@ -1,41 +1,45 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-service-deployment
+  name: dev-user-service-deployment
   labels:
-    app: user-service-deployment
+    app: dev-user-service-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user-service-deployment
+      app: dev-user-service-deployment
   template:
     metadata:
       labels:
-        app: user-service-deployment
+        app: dev-user-service-deployment
     spec:
       containers:
-        - name: user-service-deployment
+        - name: dev-user-service-deployment
           image: asamatdev/sh-user-service
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
           envFrom:
             - secretRef:
-                name: sh-secrets
+                name: dev-sh-secrets
             - configMapRef:
-                name: sh-config-maps
+                name: dev-sh-config-maps
           resources:
+            requests:
+              memory: 256Mi
+              cpu: 200m
             limits:
-              memory: "256M"
+              memory: 256Gi
+              cpu: 300m
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: user-service
+  name: dev-user-service
 spec:
   selector:
-    app: user-service-deployment
+    app: dev-user-service-deployment
   ports:
     - port: 8080
       targetPort: 8080

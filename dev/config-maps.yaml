@@ -1,9 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: sh-config-maps
+  name: dev-sh-config-maps
 data:
   SPRING_PROFILES_ACTIVE: dev
-  POSTGRES_URL: jdbc:postgresql://smart-health-do-user-13303397-0.b.db.ondigitalocean.com:25060
+  POSTGRES_URL: jdbc:postgresql://smart-health-do-user-13303397-0.b.db.ondigitalocean.com:25060/user_service
+  POSTGRES_USERNAME: doadmin
   JWT_EXPIRATION_TIME: "86400000"
-  USER_SERVICE: http://user-service:8080
+  USER_SERVICE: http://dev-user-service:8080
+  S3_ACCESS_KEY_ID: AKIA2W2RZRTMADM5H5VG
+  S3_BUCKET_NAME: smart-health-s3
+  S3_PROFILE_PICTURE_FOLDER: user-service-dev/profile-pictures/
