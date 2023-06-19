@@ -9,7 +9,7 @@ data:
   JWT_EXPIRATION_TIME: "86400000"
   USER_SERVICE: http://dev-user-service:8080
   PATIENT_SERVICE: http://dev-patient-service:8080
-  SCHEDULE_SERVICE_SERVICE: http://dev-schedule-service:8080
+  SCHEDULE_SERVICE: http://dev-schedule-service:8080
   S3_ACCESS_KEY_ID: AKIA2W2RZRTMADM5H5VG
   S3_BUCKET_NAME: smart-health-s3
   S3_PROFILE_PICTURE_FOLDER: user-service-dev/profile-pictures/
