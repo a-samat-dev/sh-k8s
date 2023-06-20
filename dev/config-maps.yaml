@@ -13,5 +13,5 @@ data:
   S3_ACCESS_KEY_ID: AKIA2W2RZRTMADM5H5VG
   S3_BUCKET_NAME: smart-health-s3
   S3_PROFILE_PICTURE_FOLDER: user-service-dev/profile-pictures/
-  KAFKA_BROKERS: kafka:9092
   MONGODB_URI: mongodb+srv://patient-service:b7k2UfQ2QefZEapP@cluster0.vacjkqi.mongodb.net
+  KAFKA_BROKERS: pkc-zpjg0.eu-central-1.aws.confluent.cloud:9092
