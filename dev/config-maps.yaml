@@ -7,6 +7,7 @@ data:
   POSTGRES_URL: jdbc:postgresql://ep-young-truth-837615.eu-central-1.aws.neon.tech:5432
   POSTGRES_USERNAME: postgres
   JWT_EXPIRATION_TIME: "86400000"
+  REF_DATA_SERVICE: http://ref-data-service:8080
   USER_SERVICE: http://dev-user-service:8080
   PATIENT_SERVICE: http://dev-patient-service:8080
   SCHEDULE_SERVICE: http://dev-schedule-service:8080
