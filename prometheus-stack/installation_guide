@@ -1,0 +1,2 @@
+helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack -f values.yaml -n monitoring
+--set=alertmanager.persistentVolume.existingClaim=kube-prometheus-stack-pvc,server.persistentVolume.existingClaim=kube-prometheus-stack-pvc,grafana.persistentVolume.existingClaim=kube-prometheus-stack-pvc
